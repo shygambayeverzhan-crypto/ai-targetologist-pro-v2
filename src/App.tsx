@@ -27,7 +27,7 @@ function App() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const tg = window.Telegram?.WebApp;
+    const tg = (window as any).Telegram?.WebApp;
     if (!tg) return;
     tg.ready();
     tg.expand();
